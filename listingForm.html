@@ -1,188 +1,213 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
+	<head>
 
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="description" content="">
+		<meta name="author" content="">
 
-    <title>Experience Sharing</title>
+		<title>Experience Sharing</title>
 
-    <!-- Bootstrap Core CSS -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+		<!-- Bootstrap Core CSS -->
+		<link href="css/bootstrap.min.css" rel="stylesheet">
 
-    <!-- Custom CSS -->
-    <style>
-    body {
-        padding-top: 70px;
-        /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
-    }
-    </style>
+		<!-- Custom CSS -->
+		<style>
+		body {
+			padding-top: 70px;
+			/* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
+		}
+		</style>
 
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
+		<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+		<!--[if lt IE 9]>
+			<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+			<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+		<![endif]-->
 
-</head>
+	</head>
 
-<body>
+	<body>
 
-    <!-- Navigation -->
-    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-        <div class="container">
-            <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="index.html">Experience Sharing</a>
-            </div>
-            <!-- Collect the nav links, forms, and other content for toggling
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav">
-                    <li>
-                        <a href="#">About</a>
-                    </li>
-                    <li>
-                        <a href="#">Services</a>
-                    </li>
-                    <li>
-                        <a href="#">Contact</a>
-                    </li>
-                </ul>
-            </div>
-            -->
-            <!-- /.navbar-collapse -->
-        </div>
-        <!-- /.container -->
-    </nav>
+		<!-- Navigation -->
+		<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+			<div class="container">
+				<!-- Brand and toggle get grouped for better mobile display -->
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a class="navbar-brand" href="index.html">Experience Sharing</a>
+				</div>
+				<!-- Collect the nav links, forms, and other content for toggling
+				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+					<ul class="nav navbar-nav">
+						<li>
+							<a href="#">About</a>
+						</li>
+						<li>
+							<a href="#">Services</a>
+						</li>
+						<li>
+							<a href="#">Contact</a>
+						</li>
+					</ul>
+				</div>
+				-->
+				<!-- /.navbar-collapse -->
+			</div>
+			<!-- /.container -->
+		</nav>
 
-    <!-- Page Content -->
-    <div class="container">
+		<!-- Page Content -->
+		<div class="container">
 
-        <div class="jumbotron">
-        <h2>Offer an Experience</h2>
-        <h5>Fill out the information below.</h5>
-<form action=>
-<label for="InputExperienceName">Experience</label>
-    <div class="input-group">
-      <input type="text" class="form-control" name="InputExperienceName" id="InputExperienceName" placeholder="Enter a Title" required>
-     </div>
+			<div class="jumbotron">
+			<h2>Offer an Experience</h2>
+			<h5>Fill out the information below.</h5>
+	<form name="Store data"  method="post">
+	<label for="InputExperienceName">Experience</label>
+		<div class="input-group">
+		  <input type="text" class="form-control" name="InputExperienceName" id="InputExperienceName" placeholder="Enter a Title" required>
+		 </div>
 
-<br>
+	<br>
 
-<label for="ExperienceDescription">Detailed description of what is being offered highlighting its value</label>
-<br>
-      <div id="ExperienceDescription" class="form-input jf-required">
-          <textarea id="ExperienceDescriptionInput" class="form-textarea validate[required]" name="q6_message" cols="90" rows="10"></textarea>
-        </div>
+	<label for="ExperienceDescription">Detailed description of what is being offered highlighting its value</label>
+	<br>
+		  <div id="ExperienceDescription" class="form-input jf-required">
+			  <textarea id="ExperienceDescriptionInput" class="form-textarea validate[required]" name="q6_message" cols="90" rows="10"></textarea>
+			</div>
 
-<div>
-<label for="D1">Type of experience</label>
-    <select name="D1">
-    <option value="stuff1">Tour</option>
-    <option value="stuff2">Outdoor Activity</option>
-    <option value="stuff3">Meal</option>
-    <option value="stuff4">Workshop</option>
-    <option value="stuff4">Other</option>
-    </select></div>
+	<div>
+	<label for="D1" >Type of experience</label>
+		<select name="D1" id="ExperienceTypeInput">
+		<option value="Tour">Tour</option>
+		<option value="Outdoor Activity">Outdoor Activity</option>
+		<option value="Meal">Meal</option>
+		<option value="Workshop">Workshop</option>
+		<option value="Other">Other</option>
+		</select></div>
 
-<br>
-<br>
-<br>
-<div>
-<table border="0">
-  <tr>
-    <td>Amount of donation:&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp$</td>
-        <td align="left"><input name="price" size="25" type="text" /> </td>
-  </tr>
-  <tr>
-    <td>NGO to receive donation&nbsp;&nbsp; &nbsp;&nbsp;</td>
-        <td align="left"><input name="phnnum" size="25" type="text" /> </td>
-  </tr>
-  <tr>
-    <td class="select">Category of NGO&nbsp;&nbsp; </td>
-    <td><select name="D1">
-    <option value="stuff1">Animals</option>
-    <option value="stuff2">Environment</option>
-    <option value="stuff3">Children + Teens</option>
-    <option value="stuff4">Veterans</option>
-    <option value="stuff4">Seniors</option>
-    <option value="stuff4">Women/Women's Issues</option>
-    <option value="stuff4">Men/Men's Issues</option>
-    <option value="stuff4">Basic Needs</option>
-    <option value="stuff4">Health(mental/physical)</option>
-    <option value="stuff4">Social Equity</option>
-    </select></td>
-  </tr>
-</table>
+	<br>
+	<br>
+	<br>
+	<div>
+	<table border="0">
+	  <tr>
+		<td>Amount of donation:&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp$</td>
+			<td align="left" ><input name="price" id="DonationAmountInput" size="25" type="text" /> </td>
+	  </tr>
+	  <tr>
+		<td>NGO to receive donation&nbsp;&nbsp; &nbsp;&nbsp;</td>
+			<td align="left" ><input name="phnnum" id="NGONameInput" size="25" type="text" /> </td>
+	  </tr>
+	  <tr>
+		<td class="select">Category of NGO&nbsp;&nbsp; </td>
+		<td><select name="D1" id="NGOCategoryInput">
+		<option value="Animals">Animals</option>
+		<option value="Environment">Environment</option>
+		<option value="Children + Teens">Children + Teens</option>
+		<option value="Veterans">Veterans</option>
+		<option value="Seniors">Seniors</option>
+		<option value="Women/Women's Issues">Women/Women's Issues</option>
+		<option value="Men/Men's Issues">Men/Men's Issues</option>
+		<option value="Basic Needs">Basic Needs</option>
+		<option value="Health(mental/physical)">Health(mental/physical)</option>
+		<option value="Social Equity">Social Equity</option>
+		</select></td>
+	  </tr>
+	</table>
 
-<br>
-<br>
-<br>
-<br>
-<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
 
 
-<table border="0">
-  <tr>
-    <td>Provider Name</td>
-        <td align="left"><input name="ProviderName" size="25" type="text" /> </td>
-  </tr>
-  <tr>
-    <td>Email Id &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;</td>
-        <td align="left"><input name="ProviderEmail" size="25" type="text" /> </td>
-  </tr>
-    <tr>
-    <td>Phone Number &nbsp;&nbsp; &nbsp;&nbsp;</td>
-        <td align="left"><input name="ProviderNumber" size="25" type="text" /> </td>
-  </tr>
-  <tr>
-    <td>Address &nbsp;&nbsp; &nbsp;&nbsp;</td>
-        <td align="left"><input name="ProviderAddress" size="25" type="text" /> </td>
-  </tr>
-</table>
+	<table border="0">
+	  <tr>
+		<td>Provider Name</td>
+			<td align="left" ><input name="ProviderName" id="ProviderNameInput" size="25" type="text" /> </td>
+	  </tr>
+	  <tr>
+		<td>Email Id &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;</td>
+			<td align="left" ><input name="ProviderEmail" id="ProviderEmailInput" size="25" type="text" /> </td>
+	  </tr>
+		<tr>
+		<td>Phone Number &nbsp;&nbsp; &nbsp;&nbsp;</td>
+			<td align="left" ><input name="ProviderNumber" id="ProviderNumberInput" size="25" type="text" /> </td>
+	  </tr>
+	  <tr>
+		<td>Address &nbsp;&nbsp; &nbsp;&nbsp;</td>
+			<td align="left" ><input name="ProviderAddress" id="ProviderAddressInput" size="25" type="text" /> </td>
+	  </tr>
+	</table>
 
-<label for="ProviderDescription">Provider Bio</label>
-<br>
-      <div id="ExperienceDescription" class="form-input jf-required">
-          <textarea id="ProviderDescription" class="form-textarea validate[required]" name="ProviderDescriptionBox" cols="90" rows="10"></textarea>
-        </div>
+	<label for="ProviderDescription">Provider Bio</label>
+	<br>
+		  <div id="ExperienceDescription" class="form-input jf-required">
+			  <textarea id="ProviderDescriptionInput" class="form-textarea validate[required]" name="ProviderDescriptionBox" cols="90" rows="10"></textarea>
+			</div>
 
-  <input type="submit" class="btn btn-primary btn-lg" value="List">
-</form>
+	  <!--<input type="submit" class="btn btn-primary btn-lg" onclick="foo()" value="List">-->
+	  <button type="button" onclick="foo()">List</button>
+	  
+	</form>
+	<script>
+		function foo () {	
+			var nameexp = document.getElementById("InputExperienceName").value;
+			var descexp = document.getElementById("ExperienceDescriptionInput").value;
+			var exptype = document.getElementById("ExperienceTypeInput").value;
+			var donamt = document.getElementById("DonationAmountInput").value;
+			var ngoname = document.getElementById("NGONameInput").value;
+			var ngocat = document.getElementById("NGOCategoryInput").value;
+			var proname = document.getElementById("ProviderNameInput").value;
+			var promail = document.getElementById("ProviderEmailInput").value;
+			var pronum = document.getElementById("ProviderNumberInput").value;
+			var proadd = document.getElementById("ProviderAddressInput").value;
+			var prodesc = document.getElementById("ProviderDescriptionInput").value;
+			
+      $.ajax({
+        url:"http://localhost/ExperienceSharing-DBintegration/store-data.php", //the page containing php script
+        type: "POST", //request type
+		data: {"nameexp": nameexp, "descexp": descexp,"exptype": exptype,"donamt": donamt, "ngoname": ngoname, "ngocat": ngocat, "proname": proname, "promail": promail, "pronum": pronum, "proadd": proadd, "prodesc": prodesc},
+        success:function(result){
+         alert(result);
+       }
+     });
+ 	}
+	</script>
+	</div>
+	</div> 
+	<footer>
+				<div class="row">
+					<div class="col-lg-12">
+						<p>Copyright &copy; Joining Perspectives 2016</p>
+					</div>
+				</div>
+				<!-- /.row -->
+			</footer>
 
-</div>
-</div> 
-<footer>
-            <div class="row">
-                <div class="col-lg-12">
-                    <p>Copyright &copy; Joining Perspectives 2016</p>
-                </div>
-            </div>
-            <!-- /.row -->
-        </footer>
+		</div> <!-- /container -->
 
-    </div> <!-- /container -->
+		</div>
+		<!-- /.container -->
 
-    </div>
-    <!-- /.container -->
+		<!-- jQuery Version 1.11.1 -->
+		<script src="js/jquery.js"></script>
 
-    <!-- jQuery Version 1.11.1 -->
-    <script src="js/jquery.js"></script>
+		<!-- Bootstrap Core JavaScript -->
+		<script src="js/bootstrap.min.js"></script>
 
-    <!-- Bootstrap Core JavaScript -->
-    <script src="js/bootstrap.min.js"></script>
-
-</body>
+	</body>
 
 </html>
