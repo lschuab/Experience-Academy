@@ -23,11 +23,125 @@
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
+	
+	<!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+
+    <!-- JavaScript files should be linked at the bottom of the page  -->
+    <script src="js/jquery-3.1.1.min.js"></script>
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 
 </head>
 
-<body>
-
+<body onload="foo()">
+	<script>	
+		function foo () {
+		
+			/*var nameexp;
+			var descexp;
+			var exptype;
+			var donamt;
+			var ngoname;
+			var ngocat;
+			var proname;
+			var promail;
+			var pronum;
+			var proadd;
+			var prodesc;*/
+			
+			//var namev = document.getElementById("expname").value;
+			//var decsv = document.getElementById("expdesc").value;
+      $.ajax({
+        url:"http://localhost/ExperienceSharing-DBintegration/retreive-data.php", //the page containing php script
+        type: "POST", //request type
+        //data: {"name": namev},
+		//data: {"name": namev, "desc": decsv},
+		data: {nameexp:"nameexp"},
+        success:function(result){
+		//document.getElementById("expname").value=expname;
+		//$num=mysqli_num_rows($result);
+		//$num = $result->num_rows;
+		//$ml=mysqli_fetch_array($result);
+         //$row_cnt = mysqli_num_rows($result);
+		 //alert(result);
+       }
+     });
+	 //Retrive Name
+	 $.ajax({
+        url:"http://localhost/ExperienceSharing-DBintegration/retreive-name.php", //the page containing php script
+        type: "POST", //request type
+        //data: {"name": namev},
+		//data: {"name": namev, "desc": decsv},
+		data: {nameexp:"nameexp"},
+        success:function(result){
+		//document.getElementById("expname").value=expname;
+		//$num=mysqli_num_rows($result);
+		//$num = $result->num_rows;
+		//$ml=mysqli_fetch_array($result);
+         //$row_cnt = mysqli_num_rows($result);
+		 //alert(result);
+		 var x = document.getElementsByClassName("product");
+		 var res = result.split("-");
+		 var i;
+			for (i = 0; i < x.length; i++) {
+				x[i].innerHTML = res[i];
+			}
+       }
+     });
+	 
+	 //Retrive Price
+	 $.ajax({
+        url:"http://localhost/ExperienceSharing-DBintegration/retreive-price.php", //the page containing php script
+        type: "POST", //request type
+        //data: {"name": namev},
+		//data: {"name": namev, "desc": decsv},
+		data: {nameexp:"nameexp"},
+        success:function(result){
+		//document.getElementById("expname").value=expname;
+		//$num=mysqli_num_rows($result);
+		//$num = $result->num_rows;
+		//$ml=mysqli_fetch_array($result);
+         //$row_cnt = mysqli_num_rows($result);
+		 //alert(result);
+		 var x = document.getElementsByClassName("price");
+		 var res = result.split("-");
+		 var i;
+			for (i = 0; i < x.length; i++) {
+				x[i].innerHTML = res[i];
+			}
+       }
+     });
+	 
+	 //Retrive Description
+	 $.ajax({
+        url:"http://localhost/ExperienceSharing-DBintegration/retreive-desc.php", //the page containing php script
+        type: "POST", //request type
+        //data: {"name": namev},
+		//data: {"name": namev, "desc": decsv},
+		data: {nameexp:"nameexp"},
+        success:function(result){
+		//document.getElementById("expname").value=expname;
+		//$num=mysqli_num_rows($result);
+		//$num = $result->num_rows;
+		//$ml=mysqli_fetch_array($result);
+         //$row_cnt = mysqli_num_rows($result);
+		 //alert(result);
+		 var x = document.getElementsByClassName("desc");
+		 var res = result.split("-");
+		 var i;
+			for (i = 0; i < x.length; i++) {
+				x[i].innerHTML = res[i];
+			}
+       }
+     });
+	 
+ 	}
+	</script>
+	
     <!-- Navigation -->
     <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
         <div class="container">
@@ -146,12 +260,11 @@
 
                     <div class="col-sm-4 col-lg-4 col-md-4">
                         <div class="thumbnail">
-                            <img src="http://cdn.luxuo.com/wp-content/uploads/2011/04/Barack-Obama-Red-Rooster-468x311.jpg" alt="">
+                            <img src="https://asunow.asu.edu/sites/default/files/styles/asu_news_article_hero/public/article_heros/20151201erichbloch02.jpg?itok=P_uGH4xMhttps://asunow.asu.edu/sites/default/files/styles/asu_news_article_hero/public/article_heros/20151201erichbloch02.jpg?itok=P_uGH4xM	" alt=""/>
                             <div class="caption">
-                                <h4 class="pull-right">$24.99</h4>
-                                <h4><a href="experienceProfile1.html">First Product</a>
-                                </h4>
-                                <p>See more snippets like this online store item at <a target="_blank" href="http://www.bootsnipp.com">Bootsnipp - http://bootsnipp.com</a>.</p>
+                                <h4><a class="product" href="experienceProfile1.html">First Product</a></h4>
+								<h4><a class="price" class="pull-right">$99.99</a></h4>
+                                <p class="desc">See more snippets like this online store item at</p>
                             </div>
                             <div class="ratings">
                                 <p class="pull-right">15 reviews</p>
@@ -168,12 +281,11 @@
 
                     <div class="col-sm-4 col-lg-4 col-md-4">
                         <div class="thumbnail">
-                            <img src="http://placehold.it/320x150" alt="">
+                            <img style="height: 140px;" src="http://screenshots.en.sftcdn.net/blog/en/2014/05/Office-365-664x374.jpg" alt="">
                             <div class="caption">
-                                <h4 class="pull-right">$64.99</h4>
-                                <h4><a href="experienceProfile2.html">Second Product</a>
-                                </h4>
-                                <p>This is a short description. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                <h4><a class="product" href="experienceProfile2.html">Second Product</a></h4>
+								<h4 class="price" class="pull-right">$64.99</h4>
+                                <p class="desc">This is a short description. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                             </div>
                             <div class="ratings">
                                 <p class="pull-right">12 reviews</p>
@@ -190,12 +302,11 @@
 
                     <div class="col-sm-4 col-lg-4 col-md-4">
                         <div class="thumbnail">
-                            <img src="http://placehold.it/320x150" alt="">
+                            <img src="http://ep.yimg.com/ay/yhst-94582326164583/hero-rc-xq6-4-ch-6-axis-headless-rc-quadcopter-drone-rtf-2-4ghz-w-hd-camera-3-batteries-2-set-blade-4gb-memory-card-black-14.jpg" alt="">
                             <div class="caption">
-                                <h4 class="pull-right">$74.99</h4>
-                                <h4><a href="experienceProfile3.html">Third Product</a>
-                                </h4>
-                                <p>This is a short description. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                <h4><a class="product" href="experienceProfile3.html">Third Product</a></h4>
+								<h4 class="price" class="pull-right">$74.99</h4>
+                                <p class="desc">This is a short description. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                             </div>
                             <div class="ratings">
                                 <p class="pull-right">31 reviews</p>
@@ -212,12 +323,11 @@
 
                     <div class="col-sm-4 col-lg-4 col-md-4">
                         <div class="thumbnail">
-                            <img src="http://placehold.it/320x150" alt="">
+                            <img src="http://img1.10bestmedia.com/Images/Photos/322102/DishCafe-Reno-Lunch_54_990x660.jpg" alt="">
                             <div class="caption">
-                                <h4 class="pull-right">$84.99</h4>
-                                <h4><a href="experienceProfile4.html">Fourth Product</a>
-                                </h4>
-                                <p>This is a short description. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                <h4><a class="product" href="experienceProfile4.html">Fourth Product</a></h4>
+								<h4 class="price" class="pull-right">$84.99</h4>
+                                <p class="desc">This is a short description. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                             </div>
                             <div class="ratings">
                                 <p class="pull-right">6 reviews</p>
@@ -234,12 +344,11 @@
 
                     <div class="col-sm-4 col-lg-4 col-md-4">
                         <div class="thumbnail">
-                            <img src="http://placehold.it/320x150" alt="">
+                            <img src="http://www.publicdomainpictures.net/pictures/120000/velka/hiking-outdoors.jpg" alt="">
                             <div class="caption">
-                                <h4 class="pull-right">$94.99</h4>
-                                <h4><a href="experienceProfile5.html">Fifth Product</a>
-                                </h4>
-                                <p>This is a short description. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                <h4><a class="product" href="experienceProfile5.html">Fifth Product</a></h4>
+								<h4 class="price" class="pull-right">$94.99</h4>
+                                <p class="desc">This is a short description. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                             </div>
                             <div class="ratings">
                                 <p class="pull-right">18 reviews</p>
@@ -256,12 +365,11 @@
 
                     <div class="col-sm-4 col-lg-4 col-md-4">
                         <div class="thumbnail">
-                            <img src="http://placehold.it/320x150" alt="">
+                            <img src="http://www.sicilialb.com/images/food1.jpg" alt="">
                             <div class="caption">
-                                <h4 class="pull-right">$94.99</h4>
-                                <h4><a href="experienceProfile6.html">Fifth Product</a>
-                                </h4>
-                                <p>This is a short description. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                <h4><a class="product" href="experienceProfile6.html">Fifth Product</a></h4>
+								<h4 class="price" class="pull-right">$94.99</h4>
+                                <p class="desc">This is a short description. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                             </div>
                             <div class="ratings">
                                 <p class="pull-right">18 reviews</p>
