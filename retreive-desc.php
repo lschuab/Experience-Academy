@@ -11,8 +11,6 @@ if (!$conn) {
     die("Connection failed: " . mysqli_connect_error());
 }
 
-echo "Connection Successful 1."."<br>";
-
 $sql = "SELECT id, nameexp,descexp,exptype,donamt,ngoname,ngocat,proname,promail,pronum,proadd,prodesc FROM experience";
 $result = mysqli_query($conn, $sql);
 
@@ -33,7 +31,7 @@ if (mysqli_num_rows($result) > 0) {
 		$proadd = $row["proadd"];
 		$prodesc = $row["prodesc"];
 		
-        echo "id: " . $row["id"]. " - Name: " . $row["nameexp"]. "-" . $row["descexp"]. "-" .$row["exptype"]."-".$row["donamt"]."-".$row["ngoname"]."-".$row["ngocat"]."-".$row["proname"]."-".$row["promail"]."-".$row["pronum"]."-".$row["proadd"]."-".$row["prodesc"]. "<br>";
+        echo $row["descexp"]. "-";
     }
 } else {
     echo "0 results";
