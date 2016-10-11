@@ -5,4 +5,4 @@ This project was built within 36 hours at a Hackathon event - Hacks for Humaniti
 
 ## Copyright and License
 
-Copyright 2016 Joining Perspective LLC. 
+Copyright 2016 Joining Perspectives LLC. 
